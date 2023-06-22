@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aufgabenverwaltungs-App</title>
+  </head>
+  <body>
+    <h1>Aufgabenverwaltungs-App</h1>
+    <form id="task-form">
+      <h2>Neue Aufgabe erstellen</h2>
+      <label for="title">Titel:</label>
+      <input type="text" id="title" name="title" required><br><br>
+      <label for="description">Beschreibung:</label>
+      <input type="text" id="description" name="description"><br><br>
+      <label for="dueDate">Fälligkeitsdatum:</label>
+      <input type="date" id="dueDate" name="dueDate"><br><br>
+      <input type="submit" value="Aufgabe erstellen">
+    </form>
+    <button id="get-tasks">Aufgaben abrufen</button>
+    <ul id="tasks"></ul>
+    <script src="fetch.js"></script>
+  </body>
+</html>
