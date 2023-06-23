@@ -36,6 +36,19 @@ app.post('/tasks', async (req, res) => {
   res.status(201).json(task);
 });
 
+// Route zum Aktualisieren des Status einer Aufgabe
+app.patch('/tasks/:id', async (req, res) => {
+  const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.json(task);
+});
+
+//löschen button
+app.delete('/tasks/:id', async (req, res) => {
+  await Task.findByIdAndDelete(req.params.id);
+  res.status(204).end();
+});
+
+
 // Schritt 2: Erstelle ein einfaches Express-Server-Setup, das auf Anfragen auf dem Port 3000 hört.
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
