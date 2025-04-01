@@ -1,0 +1,19 @@
+#gitignore file
+
+# Ignore node_modules directory in current and parent directories
+node_modules/
+../node_modules/
+
+# Ignore log files in current and parent directories
+*.log
+../*.log
+
+# Ignore environment files in current and parent directories
+.env
+../.env
+
+# Ignore build directories in current and parent directories
+dist/
+build/
+../dist/
+../build/
